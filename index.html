@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guía interactiva paso a paso de la Ruta Única de Atención de casos de hostigamiento sexual y/o acoso sexual en la Administración Pública Estatal (APE).">
+  <title>Ruta Única de Atención (HS/AS en la APE) — Guía Interactiva</title>
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/a11y.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <!-- Encabezado y Cintillo Institucional -->
+  <header class="site-header">
+    <div class="container">
+      <div id="header-logo-ribbon" class="logo-ribbon" aria-label="Cintillo de logotipos institucionales"></div>
+    </div>
+
+    <div class="a11y-toolbar">
+      <div class="container a11y-toolbar__inner">
+        <nav class="a11y-toolbar__nav" aria-label="Navegación de secciones">
+          <a class="a11y-toolbar__link" href="#ruta-pasos">Ruta de 9 pasos</a>
+          <a class="a11y-toolbar__link" href="#donde-acudo">¿Dónde acudo?</a>
+          <a class="a11y-toolbar__link" href="#glosario">Glosario</a>
+        </nav>
+
+        <div class="a11y-controls" role="group" aria-label="Controles de accesibilidad y difusión">
+          <button id="font-decrease" type="button" class="a11y-btn" aria-label="Reducir tamaño de texto">A-</button>
+          <button id="font-increase" type="button" class="a11y-btn" aria-label="Aumentar tamaño de texto">A+</button>
+          <button id="toggle-contrast" type="button" class="a11y-btn" aria-pressed="false">Alto contraste</button>
+          <button id="open-qr-modal" type="button" class="a11y-btn" aria-haspopup="dialog">Código QR de acceso</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main id="contenido-principal">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <span class="hero__eyebrow">Administración Pública Estatal (APE)</span>
+        <h1 id="hero-title" class="hero__title">Ruta Única de Atención de casos de hostigamiento sexual y/o acoso sexual</h1>
+        <p class="hero__subtitle">
+          Guía interactiva paso a paso para servidoras y servidores públicos. Consulta qué instancia interviene en cada etapa, dónde acudir y el significado de las siglas oficiales, sin dejar rastro de navegación.
+        </p>
+
+        <div class="hero__legend" aria-label="Actores institucionales de la ruta">
+          <div class="legend-pill">
+            <span class="legend-pill__dot legend-pill__dot--ug" aria-hidden="true"></span>
+            <span><strong>Unidad de Género (UG):</strong> Pasos 1 al 3</span>
+          </div>
+          <div class="legend-pill">
+            <span class="legend-pill__dot legend-pill__dot--oic" aria-hidden="true"></span>
+            <span><strong>Órgano Interno de Control (OIC):</strong> Pasos 4 al 9</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Línea de Tiempo Interactiva (9 Pasos) -->
+    <section id="ruta-pasos" class="section" aria-labelledby="timeline-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="timeline-title" class="section__title">Línea de tiempo: 9 pasos de atención</h2>
+          <p class="section__lead">
+            Selecciona cada paso para conocer la acción institucional y una breve nota de acompañamiento. Puedes filtrar por instancia o navegar con el teclado.
+          </p>
+        </div>
+
+        <div class="timeline-controls">
+          <div class="filter-group" role="group" aria-label="Filtrar pasos por institución">
+            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">Todos (9)</button>
+            <button type="button" class="filter-btn filter-btn--ug" data-filter="ug" aria-pressed="false">Unidad de Género (1–3)</button>
+            <button type="button" class="filter-btn filter-btn--oic" data-filter="oic" aria-pressed="false">Órgano Interno de Control (4–9)</button>
+          </div>
+
+          <div class="progress-box">
+            <div class="progress-box__label">
+              <span>Progreso de lectura</span>
+              <span id="progress-count" aria-live="polite">0 de 9 pasos revisados</span>
+            </div>
+            <div id="progress-track" class="progress-track" role="progressbar" aria-label="Progreso de lectura de los 9 pasos" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0">
+              <div id="progress-fill" class="progress-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-actions">
+          <button id="expand-all-steps" type="button" class="text-action-btn">Expandir todos</button>
+          <button id="collapse-all-steps" type="button" class="text-action-btn">Contraer todos</button>
+        </div>
+
+        <ol id="timeline-list" class="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- Sección "¿Dónde acudo?" -->
+    <section id="donde-acudo" class="section section--alt" aria-labelledby="directory-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="directory-title" class="section__title">¿Dónde acudo?</h2>
+          <p class="section__lead">
+            Domicilios oficiales y sitio web institucional de referencia incluidos en el cartel.
+          </p>
+        </div>
+
+        <div id="directory-grid" class="directory-grid"></div>
+
+        <div class="portal-banner">
+          <p class="portal-banner__text">Sitio web oficial de consulta: <strong>ivermujeres.gob.mx</strong></p>
+          <a class="btn-primary" href="https://ivermujeres.gob.mx" target="_blank" rel="noopener noreferrer">
+            Visitar ivermujeres.gob.mx
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Glosario Corto de Siglas -->
+    <section id="glosario" class="section" aria-labelledby="glossary-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="glossary-title" class="section__title">Glosario de siglas</h2>
+          <p class="section__lead">
+            Consulta rápidamente el significado de las siglas utilizadas en la Ruta Única de Atención.
+          </p>
+        </div>
+
+        <div class="glossary-search-wrap">
+          <label for="glossary-search" class="glossary-search-label">Buscar sigla o término</label>
+          <input id="glossary-search" type="search" class="glossary-search-input" placeholder="Ej. UG, OIC, UA, IPRA, APE..." autocomplete="off">
+        </div>
+
+        <div id="glossary-grid" class="glossary-grid"></div>
+        <p id="glossary-empty" class="glossary-empty" hidden>No se encontraron siglas que coincidan con tu búsqueda.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de Página Institucional -->
+  <footer class="site-footer">
+    <div class="container">
+      <div id="footer-logos" class="footer-logos" aria-label="Instituciones participantes"></div>
+      <p class="footer-note">
+        Guía informativa basada exclusivamente en el cartel oficial "Ruta Única de Atención de casos de hostigamiento sexual y/o acoso sexual en la Administración Pública Estatal (APE)". Este sitio no recopila datos, no utiliza cookies ni almacena historial local.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal Accesible: Código QR de Acceso (Versión Imprimible) -->
+  <dialog id="qr-modal" class="qr-modal" aria-labelledby="qr-modal-title">
+    <div class="qr-modal__card">
+      <h2 id="qr-modal-title" class="qr-modal__title">Código QR de acceso institucional</h2>
+      <p class="qr-modal__desc">
+        Escanea este código desde cualquier teléfono para abrir la guía interactiva de la <strong>Ruta Única de Atención (HS/AS en la APE)</strong>.
+      </p>
+      <div class="qr-modal__frame">
+        <img id="qr-modal-img" src="./assets/qr-ruta-atencion.svg" alt="Código QR hacia https://sivople.github.io/ruta-unica-atencion-ape/" width="240" height="240">
+      </div>
+      <p id="qr-modal-url" class="qr-modal__url">https://sivople.github.io/ruta-unica-atencion-ape/</p>
+      <div class="qr-modal__actions">
+        <button id="print-qr-btn" type="button" class="btn-primary">Imprimir versión</button>
+        <a class="text-action-btn" href="./assets/qr-ruta-atencion.png" download="qr-ruta-atencion.png">Descargar PNG</a>
+        <a class="text-action-btn" href="./assets/qr-ruta-atencion.svg" download="qr-ruta-atencion.svg">Descargar SVG</a>
+        <button id="close-qr-modal" type="button" class="text-action-btn">Cerrar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Botón Fijo de Salida Rápida -->
+  <button id="quick-exit-btn" type="button" class="quick-exit-btn" aria-label="Salida rápida de emergencia hacia Google. También puedes presionar la tecla Escape.">
+    <span>Salida rápida</span>
+    <span class="quick-exit-btn__hint" aria-hidden="true">ESC</span>
+  </button>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/quick-exit.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* ==========================================================================
+   a11y.css — Alto contraste, focus-visible, skip link y media queries A11y
+   ========================================================================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-4);
+  z-index: 2000;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-yellow);
+  color: var(--text-on-yellow);
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  border: 2px solid #000000;
+}
+
+.skip-link:focus {
+  top: var(--space-3);
+}
+
+/* Estados de foco visibles de alto contraste */
+:focus-visible {
+  outline: 3px solid var(--color-yellow);
+  outline-offset: 3px;
+}
+
+.site-header :focus-visible,
+.section :focus-visible,
+.glossary-search-input:focus-visible,
+.filter-btn:focus-visible,
+.step-card__trigger:focus-visible,
+.btn-primary:focus-visible,
+.text-action-btn:focus-visible {
+  outline: 3px solid var(--color-purple-deep);
+  box-shadow: 0 0 0 5px var(--color-yellow);
+}
+
+.a11y-toolbar :focus-visible,
+.site-footer :focus-visible,
+.quick-exit-btn:focus-visible {
+  outline: 3px solid var(--color-yellow);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Modo Alto Contraste (activable por botón)
+   -------------------------------------------------------------------------- */
+body.high-contrast {
+  --bg-page: #000000;
+  --bg-surface: #0B0B0B;
+  --bg-surface-alt: #161616;
+  --border-subtle: #FFFFFF;
+  --border-strong: #FFD100;
+  --text-primary: #FFFFFF;
+  --text-secondary: #F0F0F0;
+  --color-purple-deep: #000000;
+  --color-purple-mid: #111111;
+  --color-purple-soft: #1A1A1A;
+  --actor-ug-bg: #3A001A;
+  --actor-ug-accent-dark: #FF7AA8;
+  --actor-oic-bg: #002933;
+  --actor-oic-accent-dark: #6CE5FF;
+  --color-green-dark: #5EEAD4;
+}
+
+body.high-contrast .hero {
+  background: #000000;
+  border-bottom: 4px solid #FFD100;
+}
+
+body.high-contrast .section__title,
+body.high-contrast .place-card__title,
+body.high-contrast .glossary-card__term,
+body.high-contrast .glossary-search-label,
+body.high-contrast .portal-banner__text,
+body.high-contrast .text-action-btn {
+  color: #FFD100;
+}
+
+body.high-contrast a:not(.btn-primary):not(.a11y-toolbar__link):not(.skip-link) {
+  color: #6CE5FF;
+}
+
+body.high-contrast .btn-primary {
+  background-color: #FFD100;
+  color: #000000;
+  border-color: #FFD100;
+}
+
+body.high-contrast .step-card__body {
+  background-color: #121212;
+}
+
+body.high-contrast .step-card__marker {
+  color: #000000;
+  border-color: #FFFFFF;
+}
+
+body.high-contrast .step-card--ug .step-card__marker {
+  background-color: #FF7AA8;
+}
+
+body.high-contrast .step-card--oic .step-card__marker {
+  background-color: #6CE5FF;
+}
+
+body.high-contrast .filter-btn[aria-pressed="true"] {
+  background-color: #FFD100;
+  color: #000000;
+  border-color: #FFD100;
+}
+
+/* Preferencias del sistema operativo */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .step-card__panel,
+  .place-card,
+  .glossary-card {
+    border-width: 2px;
+  }
+}

@@ -1,0 +1,85 @@
+/* ==========================================================================
+   variables.css — Paleta institucional del cartel, tipografía y espaciados
+   100% Offline-First (sin dependencias de fuentes externas)
+   ========================================================================== */
+
+:root {
+  /* Paleta tomada del cartel institucional */
+  --color-purple-deep: #2E1A47;
+  --color-purple-mid: #3B1E54;
+  --color-purple-soft: #F3EEF9;
+  --color-yellow: #FFD100;
+  --color-yellow-dark: #9A7B00;
+  --color-cyan: #00B4D8;
+  --color-cyan-dark: #006D84;
+  --color-cyan-soft: #E6F8FC;
+  --color-magenta: #D81159;
+  --color-magenta-dark: #A50B42;
+  --color-magenta-soft: #FCE8EF;
+  --color-green: #2EC4B6;
+  --color-green-dark: #13796F;
+  --color-green-soft: #E6F9F7;
+
+  /* Superficies de lectura limpias */
+  --bg-page: #F7F5FA;
+  --bg-surface: #FFFFFF;
+  --bg-surface-alt: #F1ECF6;
+  --border-subtle: #DDD4E8;
+  --border-strong: #B8A8CE;
+
+  /* Tipografía de alto contraste sobre superficies claras */
+  --text-primary: #1A1128;
+  --text-secondary: #483B5E;
+  --text-on-dark: #FFFFFF;
+  --text-on-yellow: #1A1128;
+
+  /* Colores semánticos por Actor */
+  --actor-ug-accent: var(--color-magenta);
+  --actor-ug-accent-dark: var(--color-magenta-dark);
+  --actor-ug-bg: var(--color-magenta-soft);
+
+  --actor-oic-accent: var(--color-cyan);
+  --actor-oic-accent-dark: var(--color-cyan-dark);
+  --actor-oic-bg: var(--color-cyan-soft);
+
+  /* Salida rápida */
+  --exit-bg: #B80C3A;
+  --exit-bg-hover: #8F082C;
+  --exit-text: #FFFFFF;
+
+  /* Tipografía y escala fluida */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-size-base: 16px;
+  --font-scale: 1;
+
+  --text-xs: calc(0.8125rem * var(--font-scale));
+  --text-sm: calc(0.9375rem * var(--font-scale));
+  --text-md: calc(1rem * var(--font-scale));
+  --text-lg: calc(1.1875rem * var(--font-scale));
+  --text-xl: calc(1.5rem * var(--font-scale));
+  --text-2xl: calc(2rem * var(--font-scale));
+
+  /* Espaciado consistente (múltiplos de 0.25rem) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* Radios y elevación sutil */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 9999px;
+
+  --shadow-sm: 0 2px 6px rgba(46, 26, 71, 0.08);
+  --shadow-md: 0 6px 18px rgba(46, 26, 71, 0.12);
+
+  /* Layout */
+  --container-max: 1040px;
+  --transition-fast: 160ms ease;
+}
